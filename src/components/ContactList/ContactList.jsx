@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
-import {ButtonFilter, ListItem} from './ContactList.styled'
-export default function ContactList({ filterContacts, deleteContact }) {
+import ContactListItem from "../ContactListItem";
+
+export default function ContactList({ filterContacts, deleteContact}) {
     return (
         <ul>
-            {filterContacts.map(({id, name, number}) => <ListItem key={id}>{name} {number}<ButtonFilter type="button" id={id} onClick={deleteContact}>Delete</ButtonFilter></ListItem>)}
-          </ul>
+        {filterContacts.map(({ id, name, number }) => <ContactListItem> id={id} name={name} number={number} deleteContact={deleteContact}</ContactListItem>)}
+        </ul>
     )
 }
 
