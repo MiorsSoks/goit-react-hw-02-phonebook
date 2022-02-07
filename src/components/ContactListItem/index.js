@@ -1,2 +1,2 @@
-import ContactListItem from './ContactListItem'
-export default ContactListItem
+import ContactListItem from "./ContactListItem";
+export default ContactListItem;
