@@ -6,6 +6,7 @@ export default function ContactList({ filterContacts, deleteContact }) {
     <ul>
       {filterContacts.map(({ id, name, number }) => (
         <ContactListItem
+          key={id}
           id={id}
           name={name}
           number={number}
